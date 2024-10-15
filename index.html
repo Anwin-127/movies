@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Rating System</title>
+    <!-- Include Google Fonts for Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Authentication -->
+        <div id="auth">
+            <h2>Login</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+            <button id="login">Login</button>
+            <button id="signup">Sign Up</button>
+        </div>
+
+        <!-- Movie List and Rating -->
+        <div id="movie-app" style="display: none;">
+            <h2>Add Movie</h2>
+            <div>
+                <input type="text" id="movie-name" placeholder="Movie Name">
+                <select id="movie-genre">
+                    <option value="Drama">Drama</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Science Fiction">Science Fiction</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Musical">Musical</option>
+                </select>
+                <input type="number" id="movie-rating" placeholder="Rating (1-5)" min="1" max="5">
+                <button id="add-movie">Add Movie</button>
+            </div>
+
+            <h2>Movie List by Genre</h2>
+            <div id="movie-list"></div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth-compat.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
